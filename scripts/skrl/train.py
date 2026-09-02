@@ -123,8 +123,8 @@ else:
 
 def main():
     """Train with skrl agent."""
-    env_cfg, agent_cfg = resolve_task_config(args_cli.task, agent_cfg_entry_point)
-    with launch_simulation(env_cfg, args_cli):
+    with launch_simulation(None, args_cli):
+        env_cfg, agent_cfg = resolve_task_config(args_cli.task, agent_cfg_entry_point)
         if args_cli.ml_framework.startswith("torch"):
             from skrl.utils.runner.torch import Runner
         elif args_cli.ml_framework.startswith("jax"):
