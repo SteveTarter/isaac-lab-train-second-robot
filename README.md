@@ -47,10 +47,10 @@ Registered environment IDs:
 
 ### Training a Policy
 
-Train a PPO policy using SKRL:
+Train a PPO policy using SKRL (`--num_envs 1024` needed for home setup):
 
 ```bash
-uv run --project ~/git/IsaacLab scripts/skrl/train.py --task=Template-Reach-v0
+uv run --project ~/git/IsaacLab scripts/skrl/train.py --task=Template-Reach-v0 --num_envs 1024 --viz kit
 ```
 
 To run training headless (without rendering GUI):
